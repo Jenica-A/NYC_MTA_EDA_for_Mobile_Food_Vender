@@ -21,15 +21,15 @@ The data used for this project included MTA turnstile data from 2019, 2020, and 
 
 Key code utilized in the execution of this project included code to clean the MTA data, filter and sum the traffic data, merge the transit data with weather data, normalize the data, and visualize trends.
 
-- Cleaning the data involved replacing negative  counting turnstile records with positive values, and anomalously high counts with max possible counts in a day. Both of these data cleaning steps have the potential to introduce bias; however, without these steps, the data are  less reliable. Removing the unreliable data from the dataset was an option, however, almost 28% of the data was faulty and removing such a large fraction of the data would result in greater bias than approximating and imputing data in questionable cells.  
+- **Cleaning the data** involved replacing negative  counting turnstile records with positive values, and anomalously high counts with max possible counts in a day. Both of these data cleaning steps have the potential to introduce bias; however, without these steps, the data are  less reliable. Removing the unreliable data from the dataset was an option, however, almost 28% of the data was faulty and removing such a large fraction of the data would result in greater bias than approximating and imputing data in questionable cells.  
 
-- Filtering and summing data involved converting date data to a date/time format, creating unique identifiers for each station, calculating the new traffic at each turnstile and summing all entry and exit data recorded at each station on each day.  
+- **Filtering and summing data** involved converting date data to a date/time format, creating unique identifiers for each station, calculating the new traffic at each turnstile and summing all entry and exit data recorded at each station on each day.  
 
-- Merging data the MTA station and summed transit traffic data with NOAA weather data was conducted using an inner join on DATE for both datasets. The max temperature was used to classify the weather days into “hot” (80-100F) (no days reported a max temp greater than 100F), “nice” (60-80F), “cool” (40-60F), “cold” (20-40F), and “very cold” (temperatures less than 20F).
+- **Merging data** data with NOAA weather data was conducted using an inner join on DATE for both datasets. The max temperature was used to classify the weather days into “hot” (80-100F) (no days reported a max temp greater than 100F), “nice” (60-80F), “cool” (40-60F), “cold” (20-40F), and “very cold” (temperatures less than 20F).
 
-- Normalizing the data relied on the equation (x - xminimum)/(range of x), where x is the recorded traffic per day at a given station, xminimum is the smallest recorded total new traffic for a station within a weather day classification, and range of x is the xmaximum minus the previously described xminimum. This normalization equation was applied to the data to account for the difference in the number days with different kinds of weather. The resulting normalized data can be plotted on the same axes as data from other weather days to give more robust results.
+- **Normalizing the data** relied on the equation (x - xminimum)/(range of x), where x is the recorded traffic per day at a given station, xminimum is the smallest recorded total new traffic for a station within a weather day classification, and range of x is the xmaximum minus the previously described xminimum. This normalization equation was applied to the data to account for the difference in the number days with different kinds of weather. The resulting normalized data can be plotted on the same axes as data from other weather days to give more robust results.
 
-- Visualizing data was conducted using matplotlib primarily and was instrumental in arriving at recommendations to delivery to the client. 
+- **Visualizing data** was conducted using matplotlib primarily and was instrumental in arriving at recommendations to deliver to the client. 
 
 #### Tools
 
