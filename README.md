@@ -6,9 +6,12 @@ An exploration into NYC’s MTA turnstile data, merged with NOAA daily weather d
 
 NYCider Merchant, a mobile food vender sells cider icees in mild to hot weather, and sells hot cider in cool to very cold weather. They wanted to understand whether or not to change locations depending on the weather, as well is if they should reduce inventory for certain kinds of weather (at this level, reduced subway traffic is used as a proxy for reduced sales potential). Likewise, my client was interested in understanding how transit traffic changes on weekends vs week days.  
 The exploration focused on these questions:
+
 **Which stations experience the highest traffic on hot, mild, cool, and cold days?
-Does transit traffic change significantly on weekends vs weekdays?
-What stations record the highest traffic at end of the year holiday times, and on the 4th of July?**
+
+**Does transit traffic change significantly on weekends vs weekdays?
+
+**What stations record the highest traffic at end of the year holiday times, and on the 4th of July?**
 
 #### Data
 
